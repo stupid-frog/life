@@ -7,8 +7,20 @@
         <div  id ='app'>
             <!-- <input type='text' v-model='name' placeholder="你的名字"> -->
             <!-- <h1>你好,{{ name }}</h1> -->
-            <button v-on:click="clickHandler">click me</button>
-            <h1> {{ time }} </h1>
+            <!-- <p v-if='show'>这就是一个普通文本</p> -->
+            <button @click="clickHandler">click me</button>
+            <!-- <h1> {{ time | formatDate | formatDateB | formatDateC }} </h1> -->
+
+            <!-- {{ time}} -->
+            <!-- <span v-html ='link'></span>
+            <span v-pre>{{ 这里的内容是不会被编译的 }}</span>
+
+
+            {{ number / 10 }}
+            {{ isOk ? '确定' : '取消' }}
+            {{ turn.split(',').reverse().toString() }} -->
+
+            {{ prices }}
         </div>
         <script type="text/javascript" src='https://unpkg.com/vue/dist/vue.min.js'></script>
         <script>
@@ -19,7 +31,19 @@
                 data : {
                     time : new Date(),
 
-                    sid : null
+                    sid : null,
+
+                    link : '<a href="#">这是一个连接</a>',
+
+                    number : 100,
+                    isOk : false,
+                    turn : '123,456,789',
+
+                    show : true,
+
+                    price : 188,
+                    count : 5,
+
                 },
 
                 created : function(){
@@ -27,28 +51,94 @@
                 },
 
                 mounted : function(){
-                    this.clickHandler()
+                    this.update()
                     
                     if(this.sid){
                         clearInterval(this.sid)
                         this.sid = null;
                     }
-                    this.sid = setInterval( this.clickHandler, 1000)
+                    this.sid = setInterval( this.update, 1000)
                 },
 
                 beforeDestroy : function(){
                     console.log(3)
+                    if(this.sid){
+                        clearInterval(this.sid)
+                        this.sid = null;
+                    }
+                },
+
+                filters:{
+
+                    formatDate : function(value){
+                        trace(value)
+                        return Math.floor(Math.random() * 5) + 'formatDate';
+                    },
+
+                    formatDateB : function(value){
+                        trace(value)
+                        return value + 'formatDateB';
+                    },
+
+                    formatDateC : function(value){
+                        trace(value)
+                        return value;
+                    }
                 },
 
                 methods : {
+
+                    formatDate : function(value){
+
+                        var __time = new Date(value);
+                        trace(__time)
+                        var __temp = __time.getFullYear().toString() +':'+ (__time.getMonth()+1).toString() +':'+ __time.getDate().toString() +'  '+ __time.getHours() +':'+ __time.getMinutes() +':'+ __time.getSeconds()
+
+                        return __temp;
+                    },
+
                     clickHandler : function(){
                         trace('点击事件')
-                        var __time = new Date();
-                        this.time = __time.getFullYear().toString() +':'+ (__time.getMonth()+1).toString() +':'+ __time.getDate().toString() +'  '+ __time.getHours() +':'+ __time.getMinutes() +':'+ __time.getSeconds()
+                        // this.show = !this.show;
+                        this.count = Math.floor(Math.random() * 5)
+                        this.price = Math.floor(Math.random() * 188)
+                        trace('count ' + this.count + '  price  ' + this.price)
+                    },
+
+                    ttAnd : function(){
+                        // trace('我啥都不知道')
+                    },
+
+                    update : function(){
+                        // this.time = this.formatDate( new Date() )
+                    }
+                },
+
+                computed:{
+                    // prices : function(){
+                    //     return this.price * this.count;
+                    // }
+
+
+                    prices : {
+                        get : function(){
+                            return this.price * this.count
+                        },
+
+
+                        set : function(str){
+                            var ss = str.split(',');
+                            this.price = ss[0];
+                            this.count = ss[1]
+                        }
                     }
                 }
             })
-            // trace(app.$el)
+
+
+            app.prices = '50,3'
+
+            // trace(app.prices)
         </script>
     </body>
 
