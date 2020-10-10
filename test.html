@@ -20,7 +20,7 @@
             {{ isOk ? '确定' : '取消' }}
             {{ turn.split(',').reverse().toString() }} -->
 
-            {{ prices }}
+            {{ prices() }}
         </div>
         <script type="text/javascript" src='https://unpkg.com/vue/dist/vue.min.js'></script>
         <script>
@@ -88,6 +88,11 @@
 
                 methods : {
 
+                    prices : function(){
+                        trace('ttttttttttttttt')
+                        return this.price * this.count;
+                    },
+
                     formatDate : function(value){
 
                         var __time = new Date(value);
@@ -136,7 +141,7 @@
             })
 
 
-            app.prices = '50,3'
+            // app.prices = '50,3'
 
             // trace(app.prices)
         </script>
