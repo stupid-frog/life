@@ -5,10 +5,11 @@
     </head>
     <body>
         <div  id ='app'>
+            <!-- {{ message }} -->
             <!-- <input type='text' v-model='name' placeholder="你的名字"> -->
             <!-- <h1>你好,{{ name }}</h1> -->
             <!-- <p v-if='show'>这就是一个普通文本</p> -->
-            <button @click="clickHandler">click me</button>
+            <!-- <button @click="clickHandler">click me</button> -->
             <!-- <h1> {{ time | formatDate | formatDateB | formatDateC }} </h1> -->
 
             <!-- {{ time}} -->
@@ -20,15 +21,91 @@
             {{ isOk ? '确定' : '取消' }}
             {{ turn.split(',').reverse().toString() }} -->
 
-            {{ prices() }}
+            <!-- {{ prices() }} -->
+            <!-- <div :class="active()"></div> -->
+            <!-- <div :style="divStyle1">文本</div> -->
+            <!-- <template v-if="type==='name'">
+                <label>用户名</label>
+                <input placeholder="请输入用户名">
+            </template>
+            <template v-else>
+                <label>邮箱</label>
+                <input placeholder="请输入邮箱">
+            </template>
+
+            <button @click=clickHandler>切换输入类型</button> -->
+
+            <!-- <ul> -->
+                <!-- <template v-for="a in b"> -->
+                <!-- <template v-for="a in sortb"> -->
+                    <!-- <li>{{a.name}}</li>
+                    <li>{{a.anthor}}</li> -->
+                    <!-- <span>{{a}}</span> -->
+                <!-- </template> -->
+                <!-- <li v-for="(i, a) in b">{{i}} - {{a}}</li> -->
+                <!-- <li v-for="(i, a) in b">{{i.name}}-{{a}}</li> -->
+                <!-- <li v-for="book in books"> {{ book.name }}</li> -->
+            <!-- </ul> -->
+
+
+            <!-- 点击次数：{{count}} -->
+            <!-- <button @click=count+=change>+{{change}}</button> -->
+            <!-- <button @click.once='clickHandler'>就是点一下哦</button> -->
+            <!-- <input @keyup.enter.ctrl='clickHandler'> -->
+            <input type="radio" v-model="picked" value='html'>
+            <label for='html'>HTML</label>
+            <br>
+            <input type="radio" v-model="picked" value='js'>
+            <label for='js'>JavaScript</label>
+            <br>
+            <input type="radio" v-model="picked" value='css'>
+            <label for='css'>CSS</label>
+            <br>
+            <p>您的选项是：{{picked}}</p>
         </div>
-        <script type="text/javascript" src='https://unpkg.com/vue/dist/vue.min.js'></script>
+        <script src='https://unpkg.com/vue/dist/vue.min.js'></script>
         <script>
             const trace = console.log
 
             var app = new Vue({
                 el  : '#app',
                 data : {
+
+                    picked : 'css',
+
+
+                    count : 0,
+                    change : 5,
+
+                    b : [
+                        { name: 'name111111', anthor:'anthor1' },
+                        { name: 'name222', anthor:'anthor2' },
+                        { name: 'name333333333', anthor:'anthor3' },
+                        { name: 'name44', anthor:'anthor4' },
+                        { name: 'name5', anthor:'anthor5' }
+                    ],
+                    // books : [
+                    //     { name: '1' },
+                    //     { name: '2' },
+                    //     { name: '3' },
+                    //     { name: '4' },
+                    //     { name: '5' }
+                    // ],
+
+                    // b : {
+                    //     a : '3',
+                    //     b : '4',
+                    //     c : '3'
+                    // },
+
+                    type : '',
+
+                    message : '这是个文本哦',
+
+                    color : 'gray',
+
+                    fontSize : 40,
+
                     time : new Date(),
 
                     sid : null,
@@ -41,13 +118,20 @@
 
                     show : true,
 
-                    price : 188,
-                    count : 5,
+                    price : '188',
+                    // count : 5,
+
+                    isActive : true,
+                    isError : true,
+
+                    // divStyle : { color:'gray', fontSize:'40px' }
 
                 },
 
                 created : function(){
-
+                    for(var a in this.b){
+                        trace(a)
+                    }
                 },
 
                 mounted : function(){
@@ -88,6 +172,19 @@
 
                 methods : {
 
+                    divStyle:function(){
+                        return "{ 'color':this.color, 'fontSize':this.fontSize+'px' }"
+                    },
+
+                    active : function(){
+                        return [
+                            'btn',
+                            {
+                                'div-cc' : this.isError
+                            }
+                        ]
+                    },
+
                     prices : function(){
                         trace('ttttttttttttttt')
                         return this.price * this.count;
@@ -103,11 +200,18 @@
                     },
 
                     clickHandler : function(){
-                        trace('点击事件')
+                        // trace('点击事件')
                         // this.show = !this.show;
-                        this.count = Math.floor(Math.random() * 5)
-                        this.price = Math.floor(Math.random() * 188)
-                        trace('count ' + this.count + '  price  ' + this.price)
+                        // this.count = Math.floor(Math.random() * 5)
+                        // this.price = Math.floor(Math.random() * 188)
+                        // trace('count ' + this.count + '  price  ' + this.price)
+                        // this.isError = !this.isError
+                        // this.turn = this.turn ? '' : '12345'
+                        // this.type = this.type === 'name' ? 'mail' : 'name'
+                        // this.b.push(
+                        //     {  name:'name'+(this.b.length+1).toString(), anthor:'anthor'+(this.b.length+1).toString() }
+                        // )
+                        trace('点了一下')
                     },
 
                     ttAnd : function(){
@@ -136,16 +240,53 @@
                             this.price = ss[0];
                             this.count = ss[1]
                         }
+                    },
+
+                    active : function(){
+                        return [
+                            'btn',
+                            {  
+                                ['btn-'+this.turn] : this.turn !== '',
+                                ['btn-disabled'] : this.isError
+                            },
+
+                            {
+
+                                'div-cc' : this.isError
+                            }
+                        ]
+                    },
+
+                    divStyle1:function(){
+                        return { color:'gray', fontSize:'40px' }
+                    },
+
+                    ttt:function(){
+                        return { color:'gray', fontSize:'40px' }
+                    },
+
+                    sortb : function(){
+
+                        return this.b.sort(function(a,b){
+                            // return a.name.length - b.name.length
+                            return b.name.length - a.name.length
+                        })
                     }
                 }
             })
 
-
+            // var a = document.getElementsByClassName('btn-disabled')
+            // trace(a)
             // app.prices = '50,3'
 
             // trace(app.prices)
         </script>
     </body>
-
+    
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
     
 </html>

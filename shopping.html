@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>购物车</title>
+        <link rel="stylesheet" href="shop/shop.css">
+    </head>
+    <body>
+
+        
+
+        <div id='app' v-cloak>
+            <template v-if="list.length">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>商品名称</th>
+                            <th>商品单价</th>
+                            <th>购买数量</th>
+                            <th>操作</th>
+                            <th><button @click="choiceAll">全选</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(data, index) in list">
+                            <td>{{index+1}}</td>
+                            <td>{{data.name}}</td>
+                            <td>{{data.price}}</td>
+                            <td>
+                                <!-- <button @click="reduce(index)" :disabled='data.count === 1'>-</button> -->
+                                <button @click="reduce(index)">-</button>
+                                {{ data.count }}
+                                <button @click="add(index)">+</button>
+                            </td>
+                            <td>
+                                <button @click="remove(index)">移除</button>
+                            </td>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>总价：¥{{ totalPrice }}</div>
+            </template>
+            <div v-else>空购物车</div>
+        </div>
+
+        <script src=https://unpkg.com/vue/dist/vue.min.js></script>
+        <script src=shop/shop.js></script>
+    </body>
+</html>
