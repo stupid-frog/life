@@ -1,0 +1,23 @@
+h1,
+div {
+    text-align: center;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+.author {
+    text-align: left;
+    color: gray;
+    text-indent: 0em;
+}
+
+body {
+    font: 16px/28px 'Microsoft yahei';
+}
+
+a {
+    text-decoration: none;
+}
