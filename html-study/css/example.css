@@ -1,0 +1,250 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: rgba(226, 226, 226, 0.5);
+    }
+    
+    .w {
+        width: 1200px;
+        height: 42px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    input {
+        float: left;
+        border: 1px solid blue;
+        border-right: 0;
+        width: 360px;
+        height: 28px;
+        margin-left: 0 0 0 30px;
+        padding: 5px 15px;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .title {
+        position: sticky;
+        top: 0;
+        margin: 30px auto;
+        background-color: #fff;
+    }
+    
+    .title .logo {
+        float: left;
+        margin-right: 40px;
+    }
+    
+    .title .home,
+    .kecheng,
+    .guihua {
+        float: left;
+        font-size: 20px;
+        line-height: 42px;
+        padding: 0 10px;
+        margin: 0 30px;
+    }
+    
+    .title .home:hover,
+    .kecheng:hover,
+    .guihua:hover {
+        /* text-decoration: underline; */
+        border-bottom: 1px solid rgb(41, 125, 223);
+        color: rgb(41, 125, 223);
+    }
+    
+    .title .search {
+        float: left;
+    }
+    
+    .title .user {
+        float: right;
+        height: 42px;
+    }
+    
+    .title .userImg {
+        display: inline;
+        margin: 6px 0;
+        vertical-align: middle;
+    }
+    
+    .title .userName {
+        vertical-align: middle;
+    }
+    
+    .banner {
+        height: 420px;
+        background: url(images/banner2_20190819_210028.png);
+        margin: auto;
+    }
+    
+    .banner .kebiao {
+        float: left;
+        width: 180px;
+        height: 420px;
+        background-color: rgba(58, 182, 20, 0.808);
+    }
+    
+    .banner .kebiao li {
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        padding: 0 20px;
+    }
+    
+    .banner .kebiao li a {
+        /* height: 45px;
+    line-height: 45px;
+    color: #fff;
+    padding: 0 20px; */
+    }
+    
+    .banner .kebiao li a span {
+        float: right;
+    }
+    
+    .banner .kebiao li a:hover {
+        color: rgb(2, 175, 118);
+    }
+    
+    .banner .mykebiao {
+        float: right;
+        width: 180px;
+        height: 280px;
+        margin: 50px;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .banner .mykebiao h2 {
+        width: 180px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        font-size: 20px;
+        background-color: rgb(1, 116, 161);
+        color: #fff;
+    }
+    
+    .banner .mykebiao li {
+        height: 45px;
+        width: 150px;
+        margin: 0 15px;
+        padding: 5px 0;
+        border-bottom: 1px solid gray;
+    }
+    
+    .banner .mykebiao li h4 {
+        padding: 0 10px;
+        width: 90px;
+    }
+    
+    .banner .mykebiao li span {
+        padding: 0 10px;
+    }
+    
+    .banner .mykebiao a {
+        display: block;
+        width: 150px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid blue;
+        margin: 15px auto;
+        text-align: center;
+        color: blue;
+    }
+    
+    .xingqu {
+        width: 1200px;
+        height: 50px;
+        margin: 10px auto;
+        background-color: #fff;
+    }
+    
+    .xingqu h3 {
+        color: blue;
+        display: inline;
+        margin: 0 30px;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    .xingqu .tuijian {
+        display: inline;
+    }
+    
+    .xingqu .tuijian li {
+        display: inline;
+        padding: 0 30px;
+        border-left: 1px solid rgb(97, 81, 68);
+    }
+    
+    .xingqu>a {
+        color: blue;
+        float: right;
+        margin-top: 15px;
+        margin-right: 30px;
+    }
+    
+    .content {
+        width: 1225px;
+        margin: 10px auto;
+    }
+    
+    .content_head {
+        width: 1200px;
+        height: 45px;
+        margin: 35px auto;
+    }
+    
+    .content_head>h3 {
+        float: left;
+    }
+    
+    .content_head>a {
+        float: right;
+    }
+    
+    .content_body {
+        float: left;
+    }
+    
+    .content_body ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 12.5px;
+    }
+    
+    .content_body ul li {
+        display: inline-block;
+        width: 280px;
+        height: 300px;
+        /* border: 1px solid red; */
+        margin-right: 19.5px;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+    
+    .content_body ul li img {
+        width: 100%;
+    }
+    
+    .content_body ul li h2 {
+        margin: 20px 20px 0 20px;
+    }
+    
+    .content_body ul li span {
+        margin: 1px 20px 15px 20px;
+    }

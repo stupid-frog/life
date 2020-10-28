@@ -1,0 +1,332 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 15px;
+    border-bottom: 2px solid rgba(211, 30, 30, 0.733);
+}
+
+.header .logo {
+    width: 171px;
+    height: 61px;
+    background: url('../images/logo.png') no-repeat;
+}
+
+.content {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.content .title {
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(238, 238, 238);
+    padding: 0 5px;
+}
+
+.content .title h3 {
+    float: left;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.content .title span {
+    float: right;
+    font-size: 14px;
+}
+
+.content .title span a {
+    color: red;
+}
+
+.content .frame {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.content .frame ul li {
+    margin-bottom: 15px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.content .frame ul li label {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.content .frame ul li input {
+    display: inline-block;
+    width: 242px;
+    height: 37px;
+}
+
+.content .frame .phone_tips .tips_img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+    vertical-align: middle;
+}
+
+.content .frame .safe {
+    padding-left: 120px;
+}
+
+.content .frame em {
+    padding: 0 15px;
+    color: #fff;
+}
+
+.content .frame .ruo {
+    background-color: #de1111;
+}
+
+.content .frame .zhong {
+    background-color: #40b83f;
+}
+
+.content .frame .qiang {
+    background-color: #f79100;
+}
+
+.content .frame .agree {
+    padding-left: 100px;
+}
+
+.content .frame ul li input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.content .frame .agree a {
+    color: royalblue;
+}
+
+.content .frame .btn {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin-left: 100px;
+    color: #fff;
+    background-color: rgb(192, 0, 0);
+    cursor: pointer;
+    border: 0;
+    margin: 30px 0 30px 100px;
+}
+
+.footer,
+.footer .links {
+    width: 1300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer .links a {
+    padding: 0 5px;
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+}
+
+.footer .links a:nth-child(-n+11) {
+    border-right: 1px solid #ccc;
+}
+
+.footer .copyright {
+    width: 1300px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+    line-height: 20px;
+}
+
+
+/* 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    width: 500px;
+    height: 40px;
+    list-style: none;
+    margin: auto;
+}
+
+em {
+    display: inline-block;
+    font-style: normal;
+    width: 50px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.header {
+    width: 1300px;
+    margin: 20px auto;
+    border-bottom: 2px solid rgba(211, 30, 30, 0.733);
+}
+
+.logo {
+    width: 171px;
+    height: 61px;
+    background: url('../images/logo.png') no-repeat;
+}
+
+.content {
+    width: 1300px;
+    height: 500px;
+    margin: 0px auto;
+    border: 1px solid rgb(185, 185, 185);
+    line-height: 40px;
+}
+
+.content .title {
+    height: 40px;
+    background-color: rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.content h3 {
+    float: left;
+    margin-left: 15px;
+    font-weight: 400;
+}
+
+.content span {
+    float: right;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.content .title a {
+    text-decoration: underline;
+    color: red;
+}
+
+.content .frame .agree a {
+    color: #009fe9;
+}
+
+.content .frame a {
+    color: #009fe9;
+}
+
+.content .frame ul {
+    margin: 50px auto;
+}
+
+.content .frame ul li {
+    width: 700px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.content .frame label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.content .frame input {
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+    vertical-align: middle;
+}
+
+.safe {
+    padding-left: 200px;
+}
+
+em:first-of-type {
+    background-color: red;
+    text-align: center;
+}
+
+em:nth-of-type(2) {
+    background-color: rgb(0, 255, 0);
+    text-align: center;
+}
+
+em:last-of-type {
+    background-color: yellow;
+    text-align: center;
+}
+
+.frame li[class=agree] {
+    padding-left: 200px;
+}
+
+.frame li[class=agree] input {
+    width: 15px;
+    height: 15px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+    margin-right: 5px;
+}
+
+.content .frame .btn {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin-left: 50px;
+    color: #fff;
+    background-color: rgb(192, 0, 0);
+    cursor: pointer;
+}
+
+.footer,
+.footer .links {
+    width: 1300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer .links a {
+    padding: 0 5px;
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+}
+
+.footer .links a:nth-child(-n+11) {
+    border-right: 1px solid #ccc;
+}
+
+.footer .copyright {
+    width: 1300px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+    line-height: 20px;
+}
+
+.content .frame i {
+    font-style: normal;
+}
+
+.content .frame .phone_tips {
+    margin: 0;
+}
+
+.phone_tips .tips_img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../images/error.png) no-repeat;
+} */

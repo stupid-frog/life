@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.17sucai.com/preview/1528155/2019-02-15/message/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	
+    <script src="./Document_files/message.js.下载"></script><style type="text/css">.ui__alert * {
+  padding: 0;
+  margin: 0;
+}
+.ui__alert .ui__alert_bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+.ui__alert .ui__alert_bg.in {
+  -webkit-animation-name: bgFadeIn;
+          animation-name: bgFadeIn;
+}
+.ui__alert .ui__alert_bg.out {
+  -webkit-animation-name: bgFadeOut;
+          animation-name: bgFadeOut;
+}
+.ui__alert .ui__alert_content {
+  text-align: center;
+  position: fixed;
+  min-width: 250px;
+  max-width: 280px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+.ui__alert .ui__alert_content.in {
+  -webkit-animation-name: contentZoomIn;
+          animation-name: contentZoomIn;
+}
+.ui__alert .ui__alert_content.out {
+  -webkit-animation-name: contentZoomOut;
+          animation-name: contentZoomOut;
+}
+.ui__alert .ui__alert_content .ui__content_body {
+  font-size: 14px;
+  padding: 18px;
+  border-bottom: 1px solid #eee;
+}
+.ui__alert .ui__alert_content .ui__content_body .ui__title {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.ui__alert .ui__alert_content .ui__content_foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ui__alert .ui__alert_content .ui__content_foot a {
+  font-size: 14px;
+  color: #017aff;
+  display: block;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  border-left: 1px solid #eee;
+}
+.ui__alert .ui__alert_content .ui__content_foot a:first-child {
+  border-left: none;
+}
+.ui__toast_bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  position: fixed;
+}
+.ui__toast_text {
+  line-height: 1;
+  text-align: center;
+  position: fixed;
+  max-width: 200px;
+  z-index: 9999;
+  padding: 14px;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  left: 50%;
+  top: 50%;
+  font-size: 14px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@-webkit-keyframes bgFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bgFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bgFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bgFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes contentZoomIn {
+  0% {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes contentZoomIn {
+  0% {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes contentZoomOut {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+}
+@keyframes contentZoomOut {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+}
+</style><style>.</style>
+	
+    <style>
+        button {padding: 5px 10px;font-size: 16px; background: #ffc107; color: #fff;border: none}
+    </style>
+	
+</head>
+<body style="padding-top: 0px;">
+    <h2>alert方法</h2><div id="mark_mask" style="display:none;position:fixed;top:40px;left:0;z-index:99999999;height:1000px;width:100%;background:rgba(0,0,0,0.4);"></div>
+    <button id="alert">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        默认调用：alert('请打开麦克风')
+    </div>
+    <br>
+    <button id="alert2">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        回调函数：alert('请打开麦克风').then(callback)
+    </div>
+    <br>
+    <button id="alert3">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        支持多参数：alert({
+            title: '我是标题',
+            content: '请打开麦克风',
+            doneText: '按钮文字'
+        }).then(callback)
+    </div>
+    <script>
+        document.getElementById('alert').onclick = function () {
+            alert('请打开麦克风')
+        }
+        document.getElementById('alert2').onclick = function () {
+            alert('请打开麦克风').then(() => {
+                console.log('已确认')
+            })
+        }
+        document.getElementById('alert3').onclick = function () {
+            alert({
+                title: '我是标题',
+                content: '请打开麦克风',
+                doneText: '按钮文字'
+            })
+        }
+    </script>
+    <br>
+    <br>
+    <h2>confirm方法</h2>
+    <button id="confirm">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        默认调用：confirm('请打开麦克风')
+    </div>
+    <br>
+    <button id="confirm2">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+            confirm({
+                title: '我是标题',
+                content: '请打开麦克风',
+                doneText: '确认按钮文字',
+                cancalText: '取消按钮文字'
+            }).then(() =&gt; {
+                console.log('已确认')
+            }).catch(() =&gt; {
+                console.log('已取消')
+            })
+    </div>
+    <script>
+        document.getElementById('confirm').onclick = function () {
+            confirm('请打开麦克风').then(() => {
+                console.log('已确认')
+            }).catch(() => {
+                console.log('已取消')
+            })
+        }
+        document.getElementById('confirm2').onclick = function () {
+            confirm({
+                title: '我是标题',
+                content: '请打开麦克风',
+                doneText: '确认按钮文字',
+                cancelText: '取消按钮文字'
+            }).then(() => {
+                console.log('已确认')
+            }).catch(() => {
+                console.log('已取消')
+            })
+        }
+    </script>
+    <br>
+    <br>
+    <h2>toast方法</h2>
+    <button id="toast">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        默认调用：toast('请打开麦克风')
+    </div>
+    <br>
+    <button id="toast2">点击查看</button>
+    <div style="padding:20px;background: #efefef">
+        设置停留时间：toast({time: 5000, content: '停留5秒再消失'})
+    </div>
+    <script>
+        document.getElementById('toast').onclick = function () {
+            toast('请打开麦克风')
+        }
+        document.getElementById('toast2').onclick = function () {
+            toast({time: 5000, content: '停留5秒再消失'})
+        }
+    </script>
+
+<div id="window-resizer-tooltip" style="display: none;"><a href="http://www.17sucai.com/preview/1528155/2019-02-15/message/index.html#" title="编辑设置"></a><span class="tooltipTitle">窗口尺寸: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">761</span><br><span class="tooltipTitle">视窗尺寸: </span><span class="tooltipWidth" id="vpWidth">1600</span> x <span class="tooltipHeight" id="vpHeight">761</span></div></body></html>

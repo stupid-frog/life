@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            /* margin: 0; */
+            /* padding: 0; */
+        }
+        
+        li {
+            /* list-style: none; */
+            width: 300px;
+            height: 30px;
+            /* border: 1px solid red; */
+        }
+        /*         
+        li input {
+            float: right;
+        }
+        
+        input[type=password] {
+            color: red;
+        }
+        
+        ul li:nth-child(even) {
+            background-color: gray;
+        }
+        
+        ul li:nth-child(odd) {
+            background-color: red;
+        }
+        
+        ol li:nth-child(2n+3) {
+            background-color: red;
+        } */
+        
+        ol li:first-of-type {
+            /* background-color: skyblue; */
+            color: slateblue;
+        }
+        /* ol li:first-child {
+            background-color: skyblue;
+        } */
+        /* div img:hover::after {
+            display: inline-block;
+            content: '';
+            width: 500px;
+            height: 100px;
+            background-color: #ccc;
+        } */
+        /* img {
+            position: relative;
+            width: 614px;
+            height: 614px;
+            background-color: red;
+            transition: width 1s;
+        }
+        
+        img:hover {
+            width: 300%;
+        } */
+        /* div:hover::before {
+            display: inline-block;
+            position: absolute;
+            content: '';
+            width: 300%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .1);
+        } */
+        /*         
+        img {
+            width: 614px;
+            height: 614px;
+            transition: all 1s;
+        }
+        
+        img:hover {
+            width: 200%;
+            height: 200%;
+        } */
+        
+        .progre_frame {
+            width: 300px;
+            height: 20px;
+            border: 1px solid red;
+            border-radius: 15px;
+            /* background-color: red; */
+        }
+        
+        .progre {
+            width: 50px;
+            height: 20px;
+            background-color: red;
+            border-radius: 15px;
+            transition: width 1s;
+        }
+        
+        .progre_frame:hover .progre {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progre_frame">
+        <div class="progre"></div>
+    </div>
+
+
+    <div>
+        <img src="../../img/desk.png" alt="">
+    </div>
+
+    <form action="">
+        <ul>
+            <li><label for="">email：</label><input type="email"></li>
+            <li><label for="">url：</label><input type="url"></li>
+            <li><label for="">date：</label><input type="date"></li>
+            <li><label for="">time：</label><input type="time"></li>
+            <li><label for="">month：</label><input type="month"></li>
+            <li><label for="">week：</label><input type="week"></li>
+            <li><label for="">number：</label><input type="number"></li>
+            <li><label for="">tel：</label><input type="tel"></li>
+            <li><label for="">search：</label><input type="search"></li>
+            <li><label for="">color：</label><input type="color"></li>
+            <li><input type="submit" value="提交"></li>
+        </ul>
+
+
+        <input type="password" name="" id="">
+
+
+        <ol>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+            <li>
+                <lable>啊啊啊</lable>
+            </li>
+        </ol>
+    </form>
+</body>
+
+</html>
