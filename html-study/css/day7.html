@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes move {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        img {
+            /* transform: translate(100, 100); */
+            transition: all 2s;
+        }
+        
+        img:hover {
+            transform: rotate(360deg);
+        }
+        
+        .line {
+            width: 500px;
+            height: 10px;
+            border-radius: 10px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        
+        .line_bar {
+            width: 498px;
+            height: 8px;
+            border-radius: 10px;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        /*         
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            transition: all 0.2s;
+            transform-origin: left bottom;
+            animation-name: move;
+            animation-duration: 2s;
+        }
+        
+        div:hover {
+            transform: scale(2, 2);
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="line">
+        <div class="line_bar"></div>
+    </div>
+
+
+    <!-- <a href="#">我去你个腿</a> -->
+    <img src="../../images/bg22.png" alt="">
+
+    <div></div>
+</body>
+
+</html>
